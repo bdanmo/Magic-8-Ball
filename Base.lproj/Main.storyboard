@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-Kn-nVK">
+                                <rect key="frame" x="157" y="211" width="61" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R07-Vm-cPs"/>
+                                    <constraint firstAttribute="width" constant="61" id="zzH-0o-OZU"/>
+                                </constraints>
+                                <state key="normal" title="Ask!">
+                                    <color key="titleColor" red="1" green="0.98823529409999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5m-5p-pA4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask the Magic 8-Ball!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYD-ab-NEV">
+                                <rect key="frame" x="94" y="51" width="186.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99215686270000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-l9-0DW">
+                                <rect key="frame" x="77" y="345" width="221" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6Li-b3-4vW"/>
+                                    <constraint firstAttribute="width" constant="221" id="bce-12-09s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.98823529409999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a yes-or-no question" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ia-dz-Ng9">
+                                <rect key="frame" x="58" y="128" width="258" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JMN-gA-29K"/>
+                                    <constraint firstAttribute="width" constant="258" id="JQt-ld-xbu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eNw-Kn-nVK" firstAttribute="top" secondItem="5ia-dz-Ng9" secondAttribute="bottom" constant="53" id="1eK-Fn-yi7"/>
+                            <constraint firstItem="5ia-dz-Ng9" firstAttribute="top" secondItem="kYD-ab-NEV" secondAttribute="bottom" constant="53" id="7WW-KS-hj9"/>
+                            <constraint firstItem="eNw-Kn-nVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AZ7-4T-9sO"/>
+                            <constraint firstItem="5ia-dz-Ng9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G1M-LP-dYi"/>
+                            <constraint firstItem="kYD-ab-NEV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="MMa-jK-vy8"/>
+                            <constraint firstItem="Amd-l9-0DW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZeT-HM-8Bi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Amd-l9-0DW" secondAttribute="bottom" constant="242" id="bLl-IZ-ZEv"/>
+                            <constraint firstItem="Amd-l9-0DW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fnp-Ms-a8C"/>
+                            <constraint firstItem="kYD-ab-NEV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7P-2a-EUo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer" destination="Amd-l9-0DW" id="aZd-TQ-ogk"/>
+                        <outlet property="textField" destination="5ia-dz-Ng9" id="S4c-Ti-UDG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
